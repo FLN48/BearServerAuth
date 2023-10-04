@@ -1,0 +1,262 @@
+/*==============================================================*/
+/* DBMS name:      PostgreSQL 9.x                               */
+/* Created on:     04.10.2023 19:42:14                          */
+/*==============================================================*/
+
+/*
+drop index account_role_fk;
+
+drop index user_to_account2_fk;
+
+drop index account_pk;
+
+drop table account;
+
+drop index account_to_document_fk;
+
+drop index document_type_to_document_fk;
+
+drop index document_pk;
+
+drop table document;
+
+drop index document_type_pk;
+
+drop table document_type;
+
+drop index payment_type_to_paydocument_fk;
+
+drop index document_to_paydocument_fk;
+
+drop index payment_document_pk;
+
+drop table payment_document;
+
+drop index payment_type_pk;
+
+drop table payment_type;
+
+drop index role_pk;
+
+drop table role;
+
+drop index user_to_account_fk;
+
+drop index user_pk;
+
+drop table "user";
+*/
+/*==============================================================*/
+/* Table: account                                               */
+/*==============================================================*/
+create table account (
+   account_id           int8 not null,
+   user_id              int8                 not null,
+   role_id              int8                 not null,
+   constraint pk_account primary key (account_id)
+);
+
+/*==============================================================*/
+/* Index: account_pk                                            */
+/*==============================================================*/
+create unique index account_pk on account (
+account_id
+);
+
+/*==============================================================*/
+/* Index: user_to_account2_fk                                   */
+/*==============================================================*/
+create  index user_to_account2_fk on account (
+user_id
+);
+
+/*==============================================================*/
+/* Index: account_role_fk                                       */
+/*==============================================================*/
+create  index account_role_fk on account (
+role_id
+);
+
+/*==============================================================*/
+/* Table: document                                              */
+/*==============================================================*/
+create table document (
+   document_id          int8 not null,
+   document_type_id     int8                 not null,
+   account_id           int8                 not null,
+   document_summ        float8               not null,
+   document_simm_discount float8               not null,
+   document_date        date                 not null,
+   constraint pk_document primary key (document_id)
+);
+
+/*==============================================================*/
+/* Index: document_pk                                           */
+/*==============================================================*/
+create unique index document_pk on document (
+document_id
+);
+
+/*==============================================================*/
+/* Index: document_type_to_document_fk                          */
+/*==============================================================*/
+create  index document_type_to_document_fk on document (
+document_type_id
+);
+
+/*==============================================================*/
+/* Index: account_to_document_fk                                */
+/*==============================================================*/
+create  index account_to_document_fk on document (
+account_id
+);
+
+/*==============================================================*/
+/* Table: document_type                                         */
+/*==============================================================*/
+create table document_type (
+   document_type_id     int8 not null,
+   document_type_name   varchar(500)         not null,
+   constraint pk_document_type primary key (document_type_id)
+);
+
+/*==============================================================*/
+/* Index: document_type_pk                                      */
+/*==============================================================*/
+create unique index document_type_pk on document_type (
+document_type_id
+);
+
+/*==============================================================*/
+/* Table: payment_document                                      */
+/*==============================================================*/
+create table payment_document (
+   payment_document_id  int8 not null,
+   document_id          int8                 not null,
+   payment_type_id      int8                 not null,
+   payment_document_summ float8               not null,
+   payment_document_status bool                 not null,
+   payment_document_check varchar(5000)        null,
+   payment_document_summ_result float8               not null,
+   constraint pk_payment_document primary key (payment_document_id)
+);
+
+/*==============================================================*/
+/* Index: payment_document_pk                                   */
+/*==============================================================*/
+create unique index payment_document_pk on payment_document (
+payment_document_id
+);
+
+/*==============================================================*/
+/* Index: document_to_paydocument_fk                            */
+/*==============================================================*/
+create  index document_to_paydocument_fk on payment_document (
+document_id
+);
+
+/*==============================================================*/
+/* Index: payment_type_to_paydocument_fk                        */
+/*==============================================================*/
+create  index payment_type_to_paydocument_fk on payment_document (
+payment_type_id
+);
+
+/*==============================================================*/
+/* Table: payment_type                                          */
+/*==============================================================*/
+create table payment_type (
+   payment_type_id      int8 not null,
+   payment_type_name    varchar(500)         not null,
+   constraint pk_payment_type primary key (payment_type_id)
+);
+
+/*==============================================================*/
+/* Index: payment_type_pk                                       */
+/*==============================================================*/
+create unique index payment_type_pk on payment_type (
+payment_type_id
+);
+
+/*==============================================================*/
+/* Table: role                                                  */
+/*==============================================================*/
+create table role (
+   role_id              int8 not null,
+   role_name            varchar(500)         not null,
+   role_value           float8               not null,
+   constraint pk_role primary key (role_id)
+);
+
+/*==============================================================*/
+/* Index: role_pk                                               */
+/*==============================================================*/
+create unique index role_pk on role (
+role_id
+);
+
+/*==============================================================*/
+/* Table: "user"                                                */
+/*==============================================================*/
+create table "user" (
+   user_id              int8 not null,
+   account_id           int8                 null,
+   user_password_hash   varchar(500)         not null,
+   user_login           varchar(500)         not null,
+   user_email           varchar(500)         not null,
+   user_phone           varchar(100)         not null,
+   user_author          varchar(300)         not null,
+   user_working         bool                 not null,
+   user_avatar          varchar(5000)        null,
+   constraint pk_user primary key (user_id)
+);
+
+/*==============================================================*/
+/* Index: user_pk                                               */
+/*==============================================================*/
+create unique index user_pk on "user" (
+user_id
+);
+
+/*==============================================================*/
+/* Index: user_to_account_fk                                    */
+/*==============================================================*/
+create  index user_to_account_fk on "user" (
+account_id
+);
+
+alter table account
+   add constraint fk_account_account_r_role foreign key (role_id)
+      references role (role_id)
+      on delete restrict on update restrict;
+
+alter table account
+   add constraint fk_account_user_to_a_user foreign key (user_id)
+      references "user" (user_id)
+      on delete restrict on update restrict;
+
+alter table document
+   add constraint fk_document_account_t_account foreign key (account_id)
+      references account (account_id)
+      on delete restrict on update restrict;
+
+alter table document
+   add constraint fk_document_document__document foreign key (document_type_id)
+      references document_type (document_type_id)
+      on delete restrict on update restrict;
+
+alter table payment_document
+   add constraint fk_payment__document__document foreign key (document_id)
+      references document (document_id)
+      on delete restrict on update restrict;
+
+alter table payment_document
+   add constraint fk_payment__payment_t_payment_ foreign key (payment_type_id)
+      references payment_type (payment_type_id)
+      on delete restrict on update restrict;
+
+alter table "user"
+   add constraint fk_user_user_to_a_account foreign key (account_id)
+      references account (account_id)
+      on delete restrict on update restrict;
+
