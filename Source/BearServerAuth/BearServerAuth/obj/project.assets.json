@@ -1126,9 +1126,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth.csproj",
-      "projectName": "BearServerAuth",
-      "projectPath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth.csproj",
+      "projectUniqueName": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
+      "projectName": "BearServerAuth_test",
+      "projectPath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
       "packagesPath": "C:\\Users\\Александр\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\obj\\",
       "projectStyle": "PackageReference",

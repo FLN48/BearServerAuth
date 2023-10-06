@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BearServerAuth_Razor.props" />
+</Project>

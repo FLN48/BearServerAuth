@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bGOnamxhD5DAOERdeEZl0cDr0CfUHrm0bKoTrCoITwIdoXPDIGUKgxqf/9ct5pVTm9xQ3bPWcO3VXDlYRYpwtA==",
+  "dgSpecHash": "P3iGQ8eviPoT5R25Oq1p5E6+wQYySd9ICWlPmWFuL4s5q8Ru87zGnLO3ZTzJdtEzsMN0LcPwNowlh6fJkEqtZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth.csproj",
+  "projectFilePath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Александр\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Александр\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
