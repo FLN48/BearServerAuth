@@ -9,8 +9,9 @@
 	-Microsoft.EntityFrameworkCore.Tools
 	-Newtonsoft.Json
 
-2.	Подключение к существующей базе данных.
+2.	Подключение к существующей базе данных, если моделей нет.
 В Консоль диспетчера пакетов вводится 	
 	Scaffold-DbContext "Host=localhost;Port=5432;Database=usersdb;Username=postgres;Password=password"
 Далее провайдер 
 	Npgsql.EntityFrameworkCore.PostgreSQL	(к сожалению ctrl+c  не работает)
+3. Если модели есть, но нет скрипта БД, то миграции в помощь

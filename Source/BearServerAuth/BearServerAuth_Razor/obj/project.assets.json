@@ -1119,25 +1119,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Александр\\.nuget\\packages\\": {},
-    "W:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\FiLiN\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
+      "projectUniqueName": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
       "projectName": "BearServerAuth_Razor",
-      "projectPath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
-      "packagesPath": "C:\\Users\\Александр\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Александр\\source\\repos\\FLN48\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\obj\\",
+      "projectPath": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
+      "packagesPath": "C:\\Users\\FiLiN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "W:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Александр\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FiLiN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1146,7 +1144,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
