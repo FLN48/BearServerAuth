@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BearServerAuth
 {
     public partial class User
     {
-        public long UserId { get; set; }
+        [Key]
+        public string UserId { get; set; }
 
         public long? AccountId { get; set; }
 
@@ -15,16 +17,18 @@ namespace BearServerAuth
 
         public string UserEmail { get; set; } = null!;
 
-        public string UserPhone { get; set; } = null!;
+        public string? UserPhone { get; set; } = null!;
 
-        public string UserAuthor { get; set; } = null!;
+        public string? UserAuthor { get; set; } = null!;
 
         public bool UserWorking { get; set; }
 
         public string? UserAvatar { get; set; }
+        public string SecurityStamp { get; set; }
+        public string ConcurrencyStamp { get; set; }
+        public bool? UserEmailConfirmed { get; set; } = null;
+        public bool? UserPhoneConfirmed { get; set; } = null;
 
         public virtual Account? Account { get; set; }
-
-        public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
     }
 }

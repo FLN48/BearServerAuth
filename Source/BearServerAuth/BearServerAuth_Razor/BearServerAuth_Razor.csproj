@@ -8,16 +8,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\AuthorisationPages\**" />
+    <Content Remove="Pages\AuthorisationPages\**" />
+    <EmbeddedResource Remove="Pages\AuthorisationPages\**" />
+    <None Remove="Pages\AuthorisationPages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataBase\Migrations\MainData\BearServerAuthContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\AuthorisationPages\" />
+    <Folder Include="DataBase\Migrations\MainData\" />
   </ItemGroup>
 
 </Project>

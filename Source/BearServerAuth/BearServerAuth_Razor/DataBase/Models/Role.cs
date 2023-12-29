@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BearServerAuth
 {
     public partial class Role
     {
-        public long RoleId { get; set; }
+        [Key]
+        public string RoleId { get; set; }
 
         public string RoleName { get; set; } = null!;
 

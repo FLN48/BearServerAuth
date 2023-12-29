@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 namespace BearServerAuth 
 {
 
-    public partial class BearServerAuthContext : DbContext
+    public partial class MainDataContext : DbContext
     {
-        public BearServerAuthContext()
+        public MainDataContext()
         {
         }
 
-        public BearServerAuthContext(DbContextOptions<BearServerAuthContext> options)
+        public MainDataContext(DbContextOptions<MainDataContext> options)
             : base(options)
         {
         }
