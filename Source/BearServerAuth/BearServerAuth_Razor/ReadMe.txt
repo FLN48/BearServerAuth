@@ -3,6 +3,7 @@
 	-https://habr.com/ru/articles/594971/
 	-https://metanit.com/sharp/aspnet6/13.2.php
 	-https://metanit.com/sharp/razorpages/1.1.php
+	-https://metanit.com/sharp/aspnet5/15.1.php
 
 1.	Необходимо добавить через Nuget пакеты: 
 	-Npgsql.EntityFrameworkCore.PostgreSQL

@@ -5,16 +5,18 @@ namespace BearServerAuth.Pages
 {
     public class IndexModel : PageModel
     {
+        private MainDataContext db;
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, MainDataContext context)
         {
             _logger = logger;
+            db = context;
         }
 
         public void OnGet()
         {
-
+        
         }
     }
 }

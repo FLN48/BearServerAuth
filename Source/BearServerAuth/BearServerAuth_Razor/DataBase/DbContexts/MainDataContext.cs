@@ -26,6 +26,8 @@ namespace BearServerAuth
         public virtual DbSet<PaymentDocument> PaymentDocuments { get; set; }
 
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Bear_ServerAuth;Username=postgres;Password=Q12werty");

@@ -51,8 +51,8 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                         new
                         {
                             AccountId = 1L,
-                            RoleId = "cf38970a-84e1-4458-8516-7cd497166cd8",
-                            UserId = "906a93d5-8cdb-4aca-b6a9-7c6b814e7c91"
+                            RoleId = "5a972f4f-06de-4e3d-a033-d763e3d254d1",
+                            UserId = "68fb32d5-200d-4ce7-a8ad-fea898aada4a"
                         });
                 });
 
@@ -171,12 +171,12 @@ namespace BearServerAuth.DataBase.Migrations.MainData
 
                     b.HasKey("RoleId");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
 
                     b.HasData(
                         new
                         {
-                            RoleId = "cf38970a-84e1-4458-8516-7cd497166cd8",
+                            RoleId = "5a972f4f-06de-4e3d-a033-d763e3d254d1",
                             RoleName = "MainAdmin",
                             RoleValue = 0.0
                         });
@@ -230,18 +230,18 @@ namespace BearServerAuth.DataBase.Migrations.MainData
 
                     b.HasKey("UserId");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
-                            UserId = "906a93d5-8cdb-4aca-b6a9-7c6b814e7c91",
-                            ConcurrencyStamp = "3e187a4f-50e2-4c4c-ad03-706aeb83a00a",
-                            SecurityStamp = "af8dbfed-a1eb-4060-a77b-f6bb78df9357",
+                            UserId = "68fb32d5-200d-4ce7-a8ad-fea898aada4a",
+                            ConcurrencyStamp = "0526b6da-6c12-4aab-8094-20507f73614e",
+                            SecurityStamp = "550027ca-5096-4af3-b6a6-2a1dc468ec24",
                             UserEmail = "mr.camcamcam@mail.ru",
                             UserEmailConfirmed = true,
                             UserLogin = "FиLиN",
-                            UserPasswordHash = "AQAAAAEAACcQAAAAEAe52s9dWKvmPAXxWsLEEdyLIVtMQhdEbwsYCk6+5u61cU9tWfRtGmfP503nIhcgVw==",
+                            UserPasswordHash = "AQAAAAEAACcQAAAAEICWKHq7b6Q8uuOBORc16aQEYPVF+nvDslPQ5K6+UGYRBbsLMPhum80dKt8IvH+dhw==",
                             UserWorking = true
                         });
                 });

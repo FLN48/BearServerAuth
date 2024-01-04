@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BearServerAuth.DataBase.Migrations.MainData
 {
     /// <inheritdoc />
-    public partial class InitMainData : Migration
+    public partial class InitialMainDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -39,7 +39,7 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 });
 
             migrationBuilder.CreateTable(
-                name: "Role",
+                name: "Roles",
                 columns: table => new
                 {
                     RoleId = table.Column<string>(type: "text", nullable: false),
@@ -48,11 +48,11 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Role", x => x.RoleId);
+                    table.PrimaryKey("PK_Roles", x => x.RoleId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "text", nullable: false),
@@ -71,7 +71,7 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.UserId);
+                    table.PrimaryKey("PK_Users", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
@@ -87,15 +87,15 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 {
                     table.PrimaryKey("PK_Accounts", x => x.AccountId);
                     table.ForeignKey(
-                        name: "FK_Accounts_Role_RoleId",
+                        name: "FK_Accounts_Roles_RoleId",
                         column: x => x.RoleId,
-                        principalTable: "Role",
+                        principalTable: "Roles",
                         principalColumn: "RoleId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Accounts_User_UserId",
+                        name: "FK_Accounts_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -160,19 +160,19 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 });
 
             migrationBuilder.InsertData(
-                table: "Role",
+                table: "Roles",
                 columns: new[] { "RoleId", "RoleName", "RoleValue" },
-                values: new object[] { "cf38970a-84e1-4458-8516-7cd497166cd8", "MainAdmin", 0.0 });
+                values: new object[] { "5a972f4f-06de-4e3d-a033-d763e3d254d1", "MainAdmin", 0.0 });
 
             migrationBuilder.InsertData(
-                table: "User",
+                table: "Users",
                 columns: new[] { "UserId", "AccountId", "ConcurrencyStamp", "SecurityStamp", "UserAuthor", "UserAvatar", "UserEmail", "UserEmailConfirmed", "UserLogin", "UserPasswordHash", "UserPhone", "UserPhoneConfirmed", "UserWorking" },
-                values: new object[] { "906a93d5-8cdb-4aca-b6a9-7c6b814e7c91", null, "3e187a4f-50e2-4c4c-ad03-706aeb83a00a", "af8dbfed-a1eb-4060-a77b-f6bb78df9357", null, null, "mr.camcamcam@mail.ru", true, "FиLиN", "AQAAAAEAACcQAAAAEAe52s9dWKvmPAXxWsLEEdyLIVtMQhdEbwsYCk6+5u61cU9tWfRtGmfP503nIhcgVw==", null, null, true });
+                values: new object[] { "68fb32d5-200d-4ce7-a8ad-fea898aada4a", null, "0526b6da-6c12-4aab-8094-20507f73614e", "550027ca-5096-4af3-b6a6-2a1dc468ec24", null, null, "mr.camcamcam@mail.ru", true, "FиLиN", "AQAAAAEAACcQAAAAEICWKHq7b6Q8uuOBORc16aQEYPVF+nvDslPQ5K6+UGYRBbsLMPhum80dKt8IvH+dhw==", null, null, true });
 
             migrationBuilder.InsertData(
                 table: "Accounts",
                 columns: new[] { "AccountId", "RoleId", "UserId" },
-                values: new object[] { 1L, "cf38970a-84e1-4458-8516-7cd497166cd8", "906a93d5-8cdb-4aca-b6a9-7c6b814e7c91" });
+                values: new object[] { 1L, "5a972f4f-06de-4e3d-a033-d763e3d254d1", "68fb32d5-200d-4ce7-a8ad-fea898aada4a" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Accounts_RoleId",
@@ -225,10 +225,10 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 name: "DocumentTypes");
 
             migrationBuilder.DropTable(
-                name: "Role");
+                name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
         }
     }
 }

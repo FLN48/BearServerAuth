@@ -13,9 +13,12 @@ builder.Services.AddDbContext<MainDataContext>(options =>
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-// �������������� � ������� ����
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie();
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/login";
+        options.AccessDeniedPath = "/accessdenied";
+    });
 
 var app = builder.Build();
 
