@@ -12,7 +12,7 @@ build_property.RootNamespace = BearServerAuth
 build_property.ProjectDir = C:\Users\Simplex\source\repos\BearServerAuth\Source\BearServerAuth\BearServerAuth_Razor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Simplex\source\repos\BearServerAuth\Source\BearServerAuth\BearServerAuth_Razor
 build_property._RazorSourceGeneratorDebug = 
 

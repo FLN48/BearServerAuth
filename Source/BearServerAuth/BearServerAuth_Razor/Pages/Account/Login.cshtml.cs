@@ -22,14 +22,17 @@ namespace BearServerAuth.Pages
     {
         private MainDataContext db;
         private readonly ILogger<LoginModel> m_logger;
-        public readonly IPasswordHasher<User> m_passwordHasher;
+        private readonly IPasswordHasher<User> m_passwordHasher;
+        public LoginViewModel m_viewModel { get; set; }
         public LoginModel(ILogger<LoginModel> _logger, MainDataContext context)
         {
             m_logger = _logger;
             m_passwordHasher = new PasswordHasher<User>();
             db = context;
+            m_viewModel = new LoginViewModel();
         }
-
+        #region Методы
+         
         public async Task OnGetAsync(string returnUrl = null)
         {
             
@@ -69,5 +72,8 @@ namespace BearServerAuth.Pages
             await HttpContext.SignInAsync(claimsPrincipal);       
             return Redirect("/Index");
         }
+        #endregion
+
+
     }
 }
