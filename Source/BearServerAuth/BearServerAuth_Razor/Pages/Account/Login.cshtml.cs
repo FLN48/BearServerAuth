@@ -22,14 +22,17 @@ namespace BearServerAuth.Pages
     {
         private MainDataContext db;
         private readonly ILogger<LoginModel> m_logger;
-        public readonly IPasswordHasher<User> m_passwordHasher;
+        private readonly IPasswordHasher<User> m_passwordHasher;
+        public LoginViewModel m_viewModel { get; set; }
         public LoginModel(ILogger<LoginModel> _logger, MainDataContext context)
         {
             m_logger = _logger;
             m_passwordHasher = new PasswordHasher<User>();
             db = context;
+            m_viewModel = new LoginViewModel();
         }
-
+        #region Методы
+         
         public async Task OnGetAsync(string returnUrl = null)
         {
             
@@ -39,10 +42,10 @@ namespace BearServerAuth.Pages
         {
             var form = HttpContext.Request.Form;
             // если email и/или пароль не установлены, посылаем статусный код ошибки 400
-            if (!form.ContainsKey("Email") || !form.ContainsKey("Password"))
+            if (!form.ContainsKey("m_viewModel.Email") || !form.ContainsKey("m_viewModel.Password"))
                 return (IActionResult)Results.BadRequest("Email и/или пароль не установлены");
-            string email = form["email"];
-            string password = form["password"];
+            string email = form["m_viewModel.email"];
+            string password = form["m_viewModel.password"];
 
             User? person = db.Users
                 .Include(a=>a.Account)
@@ -69,5 +72,8 @@ namespace BearServerAuth.Pages
             await HttpContext.SignInAsync(claimsPrincipal);       
             return Redirect("/Index");
         }
+        #endregion
+
+
     }
 }
