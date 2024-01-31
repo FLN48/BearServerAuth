@@ -19,6 +19,10 @@ namespace BearServerAuth.Pages
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "Данное поле обязательно.")]
+        [StringLength(30, ErrorMessage = "Длина Логина должна быть не менее {2} и не более {1} символов.", MinimumLength = 5)]
+        [DataType(DataType.Text)]
+        public string Login { get; set; } = "";
+        [Required(ErrorMessage = "Данное поле обязательно.")]
         [EmailAddress]
         public string Email { get; set; } = "";
 
