@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Source",
-    "\\Source\\BearServerAuth"
+    "\\Source\\BearServerAuth",
+    "\\Source\\BearServerAuth\\BearServerAuth_Razor",
+    "\\Source\\BearServerAuth\\BearServerAuth_Razor\\Pages",
+    "\\Source\\BearServerAuth\\BearServerAuth_Razor\\Pages\\Account"
   ],
-  "SelectedNode": "\\Source\\BearServerAuth\\BearServerAuth.sln",
+  "SelectedNode": "\\Source\\BearServerAuth\\BearServerAuth_Razor\\Pages\\Account\\Login.cshtml",
   "PreviewInSolutionExplorer": false
 }

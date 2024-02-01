@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TfIpxA7x6FkRrcXHPmzEAY+VLECJxfHD7b97RaoQQvgrgZxusq23cWECojVXse4wiI6XRK+Paxr4I9xvdj+5SA==",
+  "dgSpecHash": "WKk7fgY2vtdKDfRiKuGSXi8xDuhFXLSSFhuTCGxLZoUyHBmcbOtOuiS42pxjXdupxHaS1yOlGJlWXNbPzNCv4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Simplex\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
+  "projectFilePath": "C:\\Users\\Simplex\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\BearServerAuth_Razor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Simplex\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\Simplex\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
