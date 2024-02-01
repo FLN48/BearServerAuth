@@ -2,8 +2,3 @@
 # Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
 ################################################################################
 
-/Source/BearServerAuth/BearServerAuth/obj/Release/net6.0
-/Source/BearServerAuth/BearServerAuth_Razor/obj/Release/net6.0
-/Source/BearServerAuth/.vs/BearServerAuth/FileContentIndex
-/.vs/BearServerAuth/v17
-/.vs

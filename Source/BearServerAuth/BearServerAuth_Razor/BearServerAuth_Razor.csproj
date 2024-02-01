@@ -8,10 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Admin\**" />
     <Compile Remove="Pages\AuthorisationPages\**" />
+    <Compile Remove="Pages\User\**" />
+    <Content Remove="Pages\Admin\**" />
     <Content Remove="Pages\AuthorisationPages\**" />
+    <Content Remove="Pages\User\**" />
+    <EmbeddedResource Remove="Pages\Admin\**" />
     <EmbeddedResource Remove="Pages\AuthorisationPages\**" />
+    <EmbeddedResource Remove="Pages\User\**" />
+    <None Remove="Pages\Admin\**" />
     <None Remove="Pages\AuthorisationPages\**" />
+    <None Remove="Pages\User\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,8 +39,6 @@
 
   <ItemGroup>
     <Folder Include="DataBase\Migrations\MainData\" />
-    <Folder Include="Pages\Admin\" />
-    <Folder Include="Pages\User\" />
   </ItemGroup>
 
 </Project>
