@@ -2,3 +2,4 @@
 # Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
 ################################################################################
 
+/Source/BearServerAuth/.vs/BearServerAuth/FileContentIndex
