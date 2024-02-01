@@ -1125,11 +1125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
+      "projectUniqueName": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
       "projectName": "BearServerAuth_test",
-      "projectPath": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
+      "projectPath": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\BearServerAuth_test.csproj",
       "packagesPath": "C:\\Users\\FiLiN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FiLiN\\Source\\Repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\obj\\",
+      "outputPath": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
