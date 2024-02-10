@@ -51,8 +51,8 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                         new
                         {
                             AccountId = 1L,
-                            RoleId = "5a972f4f-06de-4e3d-a033-d763e3d254d1",
-                            UserId = "68fb32d5-200d-4ce7-a8ad-fea898aada4a"
+                            RoleId = "73ea609c-21de-49bb-929b-00f8937b2ebc",
+                            UserId = "dfa355ed-e4a2-45e1-8a6f-6d1316ec8710"
                         });
                 });
 
@@ -176,9 +176,15 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                     b.HasData(
                         new
                         {
-                            RoleId = "5a972f4f-06de-4e3d-a033-d763e3d254d1",
+                            RoleId = "73ea609c-21de-49bb-929b-00f8937b2ebc",
                             RoleName = "MainAdmin",
                             RoleValue = 0.0
+                        },
+                        new
+                        {
+                            RoleId = "ad0e6f3f-072b-474f-baef-f45d63e0afc4",
+                            RoleName = "SimpleUser",
+                            RoleValue = 10.0
                         });
                 });
 
@@ -186,9 +192,6 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("text");
-
-                    b.Property<long?>("AccountId")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsRequired()
@@ -235,13 +238,13 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                     b.HasData(
                         new
                         {
-                            UserId = "68fb32d5-200d-4ce7-a8ad-fea898aada4a",
-                            ConcurrencyStamp = "0526b6da-6c12-4aab-8094-20507f73614e",
-                            SecurityStamp = "550027ca-5096-4af3-b6a6-2a1dc468ec24",
+                            UserId = "dfa355ed-e4a2-45e1-8a6f-6d1316ec8710",
+                            ConcurrencyStamp = "4de2485c-11cf-4551-a9a6-65f8b514395d",
+                            SecurityStamp = "1c7f6b68-0bb2-46f4-a3f0-338098c78333",
                             UserEmail = "mr.camcamcam@mail.ru",
                             UserEmailConfirmed = true,
                             UserLogin = "FиLиN",
-                            UserPasswordHash = "AQAAAAEAACcQAAAAEICWKHq7b6Q8uuOBORc16aQEYPVF+nvDslPQ5K6+UGYRBbsLMPhum80dKt8IvH+dhw==",
+                            UserPasswordHash = "AQAAAAEAACcQAAAAEPAsZEempHXA6YFZDtIVyMgYTkhCDA3G10U4DtPt9yMP2Y+SNDWRMUCvA1yArGU1jQ==",
                             UserWorking = true
                         });
                 });

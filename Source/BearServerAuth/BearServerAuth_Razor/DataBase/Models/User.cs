@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,8 +9,6 @@ namespace BearServerAuth
     {
         [Key]
         public string UserId { get; set; }
-
-        public long? AccountId { get; set; }
 
         public string UserPasswordHash { get; set; } = null!;
 
@@ -30,5 +29,14 @@ namespace BearServerAuth
         public bool? UserPhoneConfirmed { get; set; } = null;
 
         public virtual Account? Account { get; set; }
+
+        public void AddSimpleUser(MainDataContext _dbContext)
+        {
+            string role_guid = _dbContext.Roles.First(r => r.RoleValue == ((double)EnumRoles.SimpleUser)).RoleId;
+
+            _dbContext.Users.Add(this);
+            _dbContext.Accounts.Add(new Account() { RoleId = role_guid, UserId = this.UserId });
+            _dbContext.SaveChanges();
+        }
     }
 }

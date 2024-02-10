@@ -22,6 +22,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext1 = scope.ServiceProvider.GetRequiredService<MainDataContext>();
+    dbContext1.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
