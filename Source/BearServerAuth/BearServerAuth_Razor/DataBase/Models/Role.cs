@@ -15,4 +15,9 @@ namespace BearServerAuth
 
         public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
     }
+    public enum EnumRoles : Int64
+    {
+        MainAdmin = 0,
+        SimpleUser = 10
+    }
 }

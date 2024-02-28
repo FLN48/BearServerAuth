@@ -41,9 +41,7 @@ namespace BearServerAuth.Pages
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             var form = HttpContext.Request.Form;
-            // если email и/или пароль не установлены, посылаем статусный код ошибки 400
-            if (!form.ContainsKey("m_viewModel.Email") || !form.ContainsKey("m_viewModel.Password"))
-                return (IActionResult)Results.BadRequest("Email и/или пароль не установлены");
+
             string email = form["m_viewModel.email"];
             string password = form["m_viewModel.password"];
 

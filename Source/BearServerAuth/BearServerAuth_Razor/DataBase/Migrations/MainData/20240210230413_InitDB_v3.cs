@@ -4,10 +4,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BearServerAuth.DataBase.Migrations.MainData
 {
     /// <inheritdoc />
-    public partial class InitialMainDB : Migration
+    public partial class InitDB_v3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +58,6 @@ namespace BearServerAuth.DataBase.Migrations.MainData
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "text", nullable: false),
-                    AccountId = table.Column<long>(type: "bigint", nullable: true),
                     UserPasswordHash = table.Column<string>(type: "text", nullable: false),
                     UserLogin = table.Column<string>(type: "text", nullable: false),
                     UserEmail = table.Column<string>(type: "text", nullable: false),
@@ -162,17 +163,21 @@ namespace BearServerAuth.DataBase.Migrations.MainData
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "RoleId", "RoleName", "RoleValue" },
-                values: new object[] { "5a972f4f-06de-4e3d-a033-d763e3d254d1", "MainAdmin", 0.0 });
+                values: new object[,]
+                {
+                    { "73ea609c-21de-49bb-929b-00f8937b2ebc", "MainAdmin", 0.0 },
+                    { "ad0e6f3f-072b-474f-baef-f45d63e0afc4", "SimpleUser", 10.0 }
+                });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "UserId", "AccountId", "ConcurrencyStamp", "SecurityStamp", "UserAuthor", "UserAvatar", "UserEmail", "UserEmailConfirmed", "UserLogin", "UserPasswordHash", "UserPhone", "UserPhoneConfirmed", "UserWorking" },
-                values: new object[] { "68fb32d5-200d-4ce7-a8ad-fea898aada4a", null, "0526b6da-6c12-4aab-8094-20507f73614e", "550027ca-5096-4af3-b6a6-2a1dc468ec24", null, null, "mr.camcamcam@mail.ru", true, "FиLиN", "AQAAAAEAACcQAAAAEICWKHq7b6Q8uuOBORc16aQEYPVF+nvDslPQ5K6+UGYRBbsLMPhum80dKt8IvH+dhw==", null, null, true });
+                columns: new[] { "UserId", "ConcurrencyStamp", "SecurityStamp", "UserAuthor", "UserAvatar", "UserEmail", "UserEmailConfirmed", "UserLogin", "UserPasswordHash", "UserPhone", "UserPhoneConfirmed", "UserWorking" },
+                values: new object[] { "dfa355ed-e4a2-45e1-8a6f-6d1316ec8710", "4de2485c-11cf-4551-a9a6-65f8b514395d", "1c7f6b68-0bb2-46f4-a3f0-338098c78333", null, null, "mr.camcamcam@mail.ru", true, "FиLиN", "AQAAAAEAACcQAAAAEPAsZEempHXA6YFZDtIVyMgYTkhCDA3G10U4DtPt9yMP2Y+SNDWRMUCvA1yArGU1jQ==", null, null, true });
 
             migrationBuilder.InsertData(
                 table: "Accounts",
                 columns: new[] { "AccountId", "RoleId", "UserId" },
-                values: new object[] { 1L, "5a972f4f-06de-4e3d-a033-d763e3d254d1", "68fb32d5-200d-4ce7-a8ad-fea898aada4a" });
+                values: new object[] { 1L, "73ea609c-21de-49bb-929b-00f8937b2ebc", "dfa355ed-e4a2-45e1-8a6f-6d1316ec8710" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Accounts_RoleId",

@@ -35,5 +35,6 @@ namespace BearServerAuth.Pages
         [DataType(DataType.Password, ErrorMessage = "Не верный формат Пароля")]
         [Compare("Password", ErrorMessage = "Пароли не совпадают.")]
         public string ConfirmPassword { get; set; } = "";
+
     }
 }
