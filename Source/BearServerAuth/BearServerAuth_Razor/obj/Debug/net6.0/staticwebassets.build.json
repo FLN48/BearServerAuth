@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WyEPkUExfyz0SmYlbpiLqDXMxb8NOX37gnY45jtbq+g=",
+  "Hash": "YtniX1a7DxUy92h656gJDdku7UtO09ZxoRs2D7TeSIQ=",
   "Source": "BearServerAuth_Razor",
   "BasePath": "_content/BearServerAuth_Razor",
   "Mode": "Default",
@@ -1836,6 +1836,23 @@
       "OriginalItemSpec": "wwwroot\\css\\AccountStyle.css"
     },
     {
+      "Identity": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\css\\LeftPanel.css",
+      "SourceId": "BearServerAuth_Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\",
+      "BasePath": "_content/BearServerAuth_Razor",
+      "RelativePath": "css/LeftPanel.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LeftPanel.css"
+    },
+    {
       "Identity": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\css\\site.css",
       "SourceId": "BearServerAuth_Razor",
       "SourceType": "Discovered",
@@ -1868,6 +1885,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\js\\LeftPanel.js",
+      "SourceId": "BearServerAuth_Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\",
+      "BasePath": "_content/BearServerAuth_Razor",
+      "RelativePath": "js/LeftPanel.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\LeftPanel.js"
     },
     {
       "Identity": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\js\\site.js",

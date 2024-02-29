@@ -185,12 +185,20 @@
       "PackagePath": "staticwebassets\\css\\AccountStyle.css"
     },
     {
+      "Id": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\css\\LeftPanel.css",
+      "PackagePath": "staticwebassets\\css\\LeftPanel.css"
+    },
+    {
       "Id": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\js\\LeftPanel.js",
+      "PackagePath": "staticwebassets\\js\\LeftPanel.js"
     },
     {
       "Id": "C:\\Users\\FiLiN\\source\\repos\\BearServerAuth\\Source\\BearServerAuth\\BearServerAuth_Razor\\wwwroot\\js\\site.js",
