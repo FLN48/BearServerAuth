@@ -7,48 +7,30 @@
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BearServerAuth.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/LeftPanel.css" asp-append-version="true" />   
-    <script src="~/js/LeftPanel.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bg-dark">
+    <div class="ContainerBody">
+        <div class="HeaderBody"><partial name="_Header.cshtml"></div>
+        <div class="LeftPanelBody"><partial name="_LeftPanel.cshtml"></div>
+        <div class="MainContentBody">
             <div class="container">
-                <ul class="navbar-nav">
-                    <li id="MenuIcon" class="nav-item" onclick="openNav()" style="cursor: pointer;">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" onclick="openNav()" class="nav-link text-white">Меню</a>
-                    </li>
-                </ul>
-                
-                <partial name="_LoginPartial.cshtml" >
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
             </div>
-            
-        </nav>
-        <partial name="_LeftPanel.cshtml">
-    </header>
-    
-
-    <div class="container">
-        
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
+        <footer class="TailBody border-top footer text-muted">
+            <div class="container">
+                &copy; 2023 - BearServerAuth 
+            </div>
+        </footer>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - BearServerAuth @* - <a asp-area="" asp-page="/Privacy">Privacy</a> *@
-        </div>
-    </footer>
+    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     
     @await RenderSectionAsync("Scripts", required: false)
 </body>
