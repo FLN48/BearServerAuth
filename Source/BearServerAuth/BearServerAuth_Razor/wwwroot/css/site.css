@@ -19,15 +19,19 @@ body {
 .ContainerBody {
     height: 100%;
     width: 100%;
-    position:absolute;
+    position: absolute;
     display: grid;
     grid-template-areas:
         'Header Header'
         'LeftPanel MainContent'
         'Tail Tail';
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 0px 1fr;
     grid-template-rows: 56px 1fr 30px;
-    
+    transition: 0.5s;
+}
+
+    .LeftPanel_Open {
+        grid-template-columns: 19.5% 1fr;
 }
 .HeaderBody {
     grid-area: Header;
@@ -35,6 +39,11 @@ body {
 .LeftPanelBody {
     grid-area: LeftPanel;
     height: 100%;
+    width: 100%; /* 0 width - change this with JavaScript */
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 4em;
+    /*transition: 0.5s;*/ /* 0.5 second transition effect to slide in the sidenav */
 }
 .MainContentBody {
     grid-area: MainContent;
@@ -43,42 +52,28 @@ body {
     grid-area: Tail;
 
 }
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    /*position: absolute;*/ /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 56px; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+/* The navigation menu links */
+.LeftPanelBody a {
+    /*padding: 8px 8px 8px 32px;*/
+    padding: 8px 0 8px 0;
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 21px;
+    color: #818181;
+    /*display: block;*/
+    transition: 0.3s;
+    width: 100%;
 }
 
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 21px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
+/* When you mouse over the navigation links, change their color */
+.LeftPanelBody a:hover {
+    color: #f1f1f1;
+}
 
-        /* When you mouse over the navigation links, change their color */
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 /*#main {
